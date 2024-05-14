@@ -1,0 +1,1127 @@
+body {
+  overflow-x: hidden;
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+}
+
+p {
+  font-family: "Ubuntu";
+  font-size: 1.6em;
+}
+
+li {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+.header{
+   border-bottom: 1px solid #E2E9F0;
+   position: sticky;
+   top: 0px;
+   background-color: #b1b2b3;
+   max-width: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   z-index: 99;
+}
+
+
+#img-banner{
+  background-image: url("Resources/RS-small.jpg");
+  aspect-ratio: 37/30;
+  width: calc(100vw);
+  background-size: cover;
+  background-position: center;
+  position: initial;
+  z-index: 50;
+  left: 0px;
+  top: 0px;
+
+}
+
+
+/* Burger management */
+
+
+
+.bar {
+   display: block;
+   width: 25px;
+   height: 3px;
+   margin: 5px auto;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   background-color: #101010;
+}
+
+
+.nav-menu {
+   position: fixed;
+   left: -100%;
+   top: 5rem;
+   flex-direction: column;
+   justify-content: center;
+   background-color: transparent;
+   width: 100%;
+   border-radius: 10px;
+   transition: 0.3s;
+   box-shadow:
+      0 10px 27px rgba(0, 0, 0, 0.05);
+      
+}
+
+.nav-menu.active {
+   left: 0;
+   z-index: 2000;
+   background-color: #b1b2b3;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-left: 0;
+
+}
+
+
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+
+.hamburger {
+   display: block;
+   cursor: pointer;
+   position: sticky;
+   top: 0;
+}
+
+.hamburger.active .bar:nth-child(2) {
+   opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+   transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+   transform: translateY(-8px) rotate(-45deg);
+}
+
+#btn-and-banner {
+   display: flex;
+   align-items: flex-start;
+   flex-direction: row-reverse;
+   width: 100%;
+}
+
+.banner-holder {
+  
+    max-width: 100%;
+    position: relative;
+    z-index: -10;
+ 
+}
+
+
+#text-banner {
+  font-family: Ubuntu;
+  position: absolute;
+  color: white;
+  text-shadow: 1px 1px 0 black;
+  z-index: 99;
+  left: calc(57%);
+  bottom: calc(30%);
+}
+
+@media screen and (min-width: 375px) and (max-width: 412px){
+  
+  #text-banner {
+    min-width: 163px;
+    font-family: Ubuntu;
+    position: absolute;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    z-index: 99;
+    left: calc(48%);
+    bottom: calc(38%);
+  }
+
+}
+
+
+
+
+.nav-link {
+   font-size: 1.6rem;
+   font-weight: 400;
+   color: #475569;
+}
+
+.nav-link:hover {
+   color: #482ff7;
+}
+
+
+/* Screens management */
+.screen-dooku {
+   max-width: 275px;
+   margin-bottom: 3rem;
+   padding: 1px;
+ }
+
+ .screen-poke {
+   max-width: 275px; 
+   margin-bottom: 1rem;
+ }
+
+ .card-div{
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ /* ********other management ************** */
+ 
+ h3 {
+   margin-block-start: 0;
+ }
+
+  article {
+    border: solid 2px rgb(90, 90, 90);
+    padding: 0px;
+    border-radius: 4px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.letterEffect {
+   font-family: Consolas, monaco, monospace;
+   font-size: 2em;
+   color: #475569;
+}
+
+
+article >a > p {
+   font-family: Ubuntu;
+   font-size: 1.6em;
+}
+
+section > p {
+  font-family: Ubuntu;
+  font-size: 1.6em;
+  margin: 4%;
+}
+
+h2 {
+   align-self: center;
+}
+
+
+/* Cartons **************************************** */
+
+:root {
+   --background-rgb: 15 15 15;
+   
+   --blue-rgb: 33 150 243;
+
+   --red-rgb: 232 7 7; 
+
+   --primary-rgb: var(--red-rgb);
+   --poke-rgb: var(--blue-rgb);
+   
+   --blob-color-1: rgb(var(--blue-rgb));
+   --blob-color-2: dodgerblue;
+ }
+ 
+.normal {
+   display: flex;
+}
+
+
+ @keyframes pan-image1 {  
+   0% {
+     background-position: 36% 42%;
+     background-size: 200%;
+   }
+   
+   20% {
+     background-position: 30% 35%;
+     background-size: 200%;
+   }
+   
+   20.0001% { /* -- View 2 -- */
+     background-position: 60% 85%;
+     background-size: 500%;
+   }
+   
+   40% {
+     background-position: 49% 81%;
+     background-size: 500%;
+   }
+   
+   40.0001% { /* -- View 3 -- */
+     background-position: 80% 42%;
+     background-size: 300%;
+   }
+   
+   60% {
+     background-position: 84% 33%;
+     background-size: 300%;
+   }
+   
+   60.0001% { /* -- View 4 -- */
+     background-position: 0% 0%;
+     background-size: 300%;
+   }
+   
+   80% {
+     background-position: 15% 4%;
+     background-size: 300%;
+   }
+   
+   80.0001% { /* -- View 5 -- */
+     background-position: 80% 10%;
+     background-size: 300%;
+   }
+   
+   100% {
+     background-position: 72% 14%;
+     background-size: 300%;
+   }
+ }
+
+
+ @keyframes pan-image2 {  
+   0% {
+     background-position: 42% 36%;
+     background-size: 150%;
+   }
+   
+   20% {
+     background-position: 30% 35%;
+     background-size: 200%;
+   }
+   
+   20.0001% { /* -- View 2 -- */
+     background-position: 80% 5%;
+     background-size: 500%;
+   }
+   
+   40% {
+     background-position: 49% 81%;
+     background-size: 500%;
+   }
+   
+   40.0001% { /* -- View 3 -- */
+     background-position: 40% 21%;
+     background-size: 300%;
+   }
+   
+   60% {
+     background-position: 84% 33%;
+     background-size: 300%;
+   }
+   
+   60.0001% { /* -- View 4 -- */
+     background-position: 100% 50%;
+     background-size: 300%;
+   }
+   
+   80% {
+     background-position: 15% 4%;
+     background-size: 300%;
+   }
+   
+   80.0001% { /* -- View 5 -- */
+     background-position: 17% 27%;
+     background-size: 270%;
+   }
+   
+   100% {
+     background-position: 72% 14%;
+     background-size: 270%;
+   }
+ }
+
+
+
+
+ 
+ @keyframes pan-overlay {
+   from {
+     background-position: 0% 0%;
+   }
+   
+   to {
+     background-position: 0% -100%;
+   }
+ }
+
+
+
+ 
+ .screen-dooku {
+   width: 500px;
+   display: flex;
+   border: 3px solid rgb(var(--primary-rgb) / 80%);
+   aspect-ratio: 10 / 16;
+   border-radius: 1rem;
+   background-color: rgb(var(--primary-rgb) / 15%);
+   overflow: hidden;
+   position: relative;
+   z-index: 10;
+ }
+ 
+ .screen:after,
+ .screen:before {
+   content: "";
+   height: 5px;
+   position: absolute;
+   z-index: 4;
+   left: 50%;
+   translate: -50% 0%;
+   background-color: white;
+ }
+ 
+ .screen:before {
+   width: 15%;
+   top: 0rem;
+   border-bottom-left-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+ }
+ 
+ .screen:after {
+   width: 25%;
+   bottom: 0rem;
+   border-top-left-radius: 1rem;
+   border-top-right-radius: 1rem;
+ }
+ 
+ 
+ 
+ .screen-overlay {    
+   background: linear-gradient(
+     rgb(var(--primary-rgb) / 0.15),
+     rgb(var(--primary-rgb) / 0.15) 3px,
+     transparent 3px,
+     transparent 9px
+   );
+   background-size: 100% 9px;
+   height: 100%;
+   width: 100%;
+   animation: pan-overlay 22s infinite linear;
+   position: absolute;
+   z-index: 2;
+   left: 0px;
+   top: 0px;
+ }
+ 
+ 
+ 
+ .screen-dooku > .screen-image {
+   background-image: url("Resources/capture\ thème\ compte\ Dooku.JPG");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   z-index: 1;
+   left: 0px;
+   top: 0px;
+   background-size: 300%;
+   background-position: 0% 0%;
+   /* filter: sepia(100%) hue-rotate(160deg); */
+   opacity: 0.6;
+   animation: pan-image1 15s linear infinite;
+ }
+ 
+ .screen-dooku > .screen-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-end;
+   flex-grow: 1;
+   gap: 4rem;
+   position: relative;
+   z-index: 3;
+   margin: 1rem;
+   padding-bottom: 6rem;
+   border: 1px solid rgb(var(--primary-rgb) / 50%);
+   border-radius: 0.6rem;
+ }
+ 
+ .screen-dooku > .screen-content > .screen-icon {
+   color: white;
+   font-size: 4rem;
+   text-shadow: 0px 0px 0.5rem white;
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   position: relative;
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user:before,
+ .screen-dooku > .screen-content > .screen-user:after {
+   content: "";
+   position: absolute;
+   top: 0px;
+   background-color: rgb(var(--primary-rgb));
+   border-radius: 1rem;
+   box-shadow: 0px 0px 8px 3px rgb(var(--primary-rgb) / 60%);
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user:before {
+   height: 2px;
+   width: 50px;
+   translate: -20px -1rem;
+   opacity: 0.75;
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user:after {
+   height: 3px;
+   width: 30px;
+   translate: 26px calc(-1rem - 0.5px);
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user > :is(.name, .link) {
+   font-family: "Source Code Pro", monospace;
+   color: white; 
+   text-align: center;
+   text-transform: uppercase; 
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user > .name {
+   position: relative;
+   font-size: 4.25rem;
+   font-weight: 400;
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user > .name:before,
+ .screen-dooku > .screen-content > .screen-user > .name:after {
+   content: "";
+   height: 4px;
+   width: 4px;
+   position: absolute;
+   border: 2px solid white;
+   border-radius: 2px;
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user > .name:before {
+   top: 55%;
+   right: -1.5rem;
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user > .name:after {
+   top: 45%;
+   left: -1.5rem;  
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user > .link {  
+   opacity: 0.8;
+   font-size: 1.5rem;
+   text-shadow: 0px 0px 0.5rem white;
+   font-weight: 400;
+   letter-spacing: 0.3rem;
+   text-decoration: none;
+ }
+ 
+ .screen-dooku > .screen-content > .screen-user > .link:is(:hover, :focus) {  
+   text-decoration: underline; 
+ }
+ 
+ 
+ /* second cart*/
+
+
+ .screen-poke {
+   width: 500px;
+   display: flex;
+   border: 3px solid rgb(var(--poke-rgb) / 80%);
+   aspect-ratio: 10 / 16;
+   border-radius: 1rem;
+   background-color: rgb(var(--poke-rgb) / 15%);
+   overflow: hidden;
+   position: relative;
+   z-index: 10;
+ }
+ 
+ .screen:after,
+ .screen:before {
+   content: "";
+   height: 5px;
+   position: absolute;
+   z-index: 4;
+   left: 50%;
+   translate: -50% 0%;
+   background-color: white;
+ }
+ 
+ .screen:before {
+   width: 15%;
+   top: 0rem;
+   border-bottom-left-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+ }
+ 
+ .screen:after {
+   width: 25%;
+   bottom: 0rem;
+   border-top-left-radius: 1rem;
+   border-top-right-radius: 1rem;
+ }
+ 
+ 
+ 
+ .screen-overlay {    
+   background: linear-gradient(
+     rgb(var(--poke-rgb) / 0.15),
+     rgb(var(--poke-rgb) / 0.15) 3px,
+     transparent 3px,
+     transparent 9px
+   );
+   background-size: 100% 9px;
+   height: 100%;
+   width: 100%;
+   animation: pan-overlay 22s infinite linear;
+   position: absolute;
+   z-index: 2;
+   left: 0px;
+   top: 0px;
+ }
+ 
+ 
+ 
+ .screen-poke > .screen-image {
+   background-image: url("Resources/capture\ thème\ pokemon\ starterJPG.JPG");
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   z-index: 1;
+   left: 0px;
+   top: 0px;
+   background-size: 300%;
+   background-position: 0% 0%;
+   /* filter: sepia(100%) hue-rotate(160deg); */
+   opacity: 0.6;
+   animation: pan-image2 15s linear infinite;
+ }
+ 
+ .screen-poke > .screen-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-end;
+   flex-grow: 1;
+   gap: 4rem;
+   position: relative;
+   z-index: 3;
+   margin: 1rem;
+   padding-bottom: 6rem;
+   border: 1px solid rgb(var(--poke-rgb) / 50%);
+   border-radius: 0.6rem;
+ }
+ 
+ .screen-poke > .screen-content > .screen-icon {
+   color: white;
+   font-size: 4rem;
+   text-shadow: 0px 0px 0.5rem white;
+ }
+ 
+ .screen-poke > .screen-content > .screen-user{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   position: relative;
+ }
+ 
+ .screen-poke > .screen-content > .screen-user:before,
+ .screen-poke > .screen-content > .screen-user:after {
+   content: "";
+   position: absolute;
+   top: 0px;
+   background-color: rgb(var(--poke-rgb));
+   border-radius: 1rem;
+   box-shadow: 0px 0px 8px 3px rgb(var(--poke-rgb) / 60%);
+ }
+ 
+ .screen-poke > .screen-content > .screen-user:before {
+   height: 2px;
+   width: 50px;
+   translate: -20px -1rem;
+   opacity: 0.75;
+ }
+ 
+ .screen-poke > .screen-content > .screen-user:after {
+   height: 3px;
+   width: 30px;
+   translate: 26px calc(-1rem - 0.5px);
+ }
+ 
+ .screen-poke > .screen-content > .screen-user > :is(.name, .link) {
+   font-family: "Source Code Pro", monospace;
+   color: white; 
+   text-align: center;
+   text-transform: uppercase; 
+ }
+ 
+ .screen-poke > .screen-content > .screen-user > .name {
+   position: relative;
+   font-size: 4.25rem;
+   font-weight: 400;
+ }
+ 
+ .screen-poke > .screen-content > .screen-user > .name:before,
+ .screen-poke > .screen-content > .screen-user > .name:after {
+   content: "";
+   height: 4px;
+   width: 4px;
+   position: absolute;
+   border: 2px solid white;
+   border-radius: 2px;
+ }
+ 
+ .screen-poke > .screen-content > .screen-user > .name:before {
+   top: 55%;
+   right: -1.5rem;
+ }
+ 
+ .screen-poke > .screen-content > .screen-user > .name:after {
+   top: 45%;
+   left: -1.5rem;  
+ }
+ 
+ .screen-poke > .screen-content > .screen-user > .link {  
+   opacity: 0.8;
+   font-size: 1.5rem;
+   text-shadow: 0px 0px 0.5rem white;
+   font-weight: 400;
+   letter-spacing: 0.3rem;
+   text-decoration: none;
+ }
+ 
+ .screen-poke > .screen-content > .screen-user > .link:is(:hover, :focus) {  
+   text-decoration: underline; 
+ }
+ 
+
+/* .card-div {
+   display: flex;
+   justify-content: space-around;
+} */
+
+/* End of carts */
+
+@media only screen and (min-width: 413px ) and (max-width: 600px){
+  #text-banner {
+    font-size: 1.2rem;
+    left: calc(48%);
+    bottom: calc(38%);
+    width: calc(47%);
+  }
+
+
+}
+
+
+
+
+
+/* When we are on (old) Tablet viewports */
+@media only screen and (min-width: 601px ) and (max-width: 768px){
+   
+   .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: #101010;
+   }
+
+   
+   main article {
+    border: solid 2px rgb(90, 90, 90);
+    padding: 1.6em;
+    border-radius: 3em;
+    margin: 2em;
+    }
+
+
+    .screen-dooku {
+      min-width: 63vw;
+    }
+
+    .screen-poke {
+      min-width: 63vw;
+    }
+   
+
+ #img-banner{
+  background-image: url("Resources/madium-banner.png");
+  aspect-ratio: 192/105;
+  width: calc(100vw);
+  background-size: cover;
+  background-position: center;
+  position: initial;
+  z-index: 50;
+  left: 0px;
+  top: 0px;
+
+  }
+
+
+  #text-banner {
+    font-size: 1.6rem;
+    left: calc(50%);
+    bottom: calc(34%);
+    width: calc(64%);
+  }
+
+
+  .bar {
+    display: block;
+    width: 75px;
+    height: 9px;
+    margin: 15px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+ }
+
+ .hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(23px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-23px) rotate(-45deg);
+}
+
+
+
+
+}
+
+
+/* We are on desktop or modern tablet*/
+@media only screen and (min-width: 769px) and (max-width: 1332px){
+
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  
+  .article-link {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+  }
+   
+    
+  .nav-item {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 2.5rem 0;
+    margin-left: 0;
+  }
+
+   /* Burger management not mobile */
+
+   #btn-and-banner {
+         
+      align-items: center;
+      flex-direction: column;
+      align-self: center;
+   }
+
+   .header {
+    display: flex;
+   }
+
+   .hamburger {
+      display: none;
+   }
+
+   nav>.nav-menu {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position: initial;
+      left: auto;
+      top: auto;
+      flex-direction: row;
+      background-color: white;
+      min-width: 90%;
+      border-radius: 10px;
+      text-align: start;
+      transition: none;
+      box-shadow:none;
+      margin-block-start: 0;
+      padding-inline-start: 0;
+   }
+
+   .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-end;
+      min-width: 90%;
+      z-index: 99;
+   }
+
+
+   #img-banner{
+    background-image: url("Resources/Roman\ Sueur\ very\ clean.png");
+    height: 50%;
+    width: 50%;
+  }
+
+
+
+ main article {
+  border: solid 2px rgb(90, 90, 90);
+  padding: 2em;
+  border-radius: 3em;
+  margin: 2em;
+  }
+
+  .banner-holder {
+    max-width: 100%;
+    position: relative;
+    z-index: -10;
+ }
+
+  #img-banner{
+    background-image: url("Resources/Roman\ Sueur\ very\ clean.png");
+    aspect-ratio: 5/1;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    position: initial;
+    z-index: 50;
+    left: 0px;
+    top: 0px;
+  
+    }
+
+
+    .navbar {
+      align-self: center;
+    }
+
+    .card-div {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-block-start: 1em;
+    }
+
+    .screen-dooku {
+      max-width: 500px;
+      margin-bottom: 0;
+    }
+    .screen-poke {
+      max-width: 500px; 
+      margin-bottom: 0;
+    }
+
+    .letterEffect {
+      font-size: 3em;
+    }
+
+    h3 {
+      margin-block-end: 0.5em;
+    }
+
+    #text-banner {
+      left: calc(41%);
+      bottom: calc(24%);
+      font-size: 1.4em;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 1333px) {
+
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .nav-item {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 2.5rem 0;
+    margin-left: 0;
+  }
+
+  .header {
+    display: flex;
+   }
+
+  .article-link {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+  }
+
+
+  /* Burger management not mobile */
+
+  #btn-and-banner {
+         
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1%;
+ }
+
+ .hamburger {
+    display: none;
+ }
+
+ nav>.nav-menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: initial;
+  left: auto;
+  top: auto;
+  flex-direction: row;
+  background-color: white;
+  min-width: 90%;
+  border-radius: 10px;
+  text-align: start;
+  transition: none;
+  box-shadow:none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+ 
+
+
+
+main article {
+  border: solid 2px rgb(90, 90, 90);
+  padding: 2em;
+  border-radius: 3em;
+  margin: 2em;
+}
+
+.banner-holder {
+  max-width: 100%;
+  position: relative;
+  z-index: -10;
+}
+
+#img-banner{
+  background-image: url("Resources/Roman\ Sueur\ very\ clean.png");
+  aspect-ratio: 5/1;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  position: initial;
+  z-index: 50;
+  left: 0px;
+  top: 0px;
+
+  }
+
+  .banner-holder {
+    max-width: 100%;
+    position: relative;
+    z-index: -10;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90%;
+    z-index: 99;
+  }
+
+  .card-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-block-start: 1em;
+  }
+
+  .screen-dooku {
+    max-width: 800px;
+    margin-bottom: 0;
+  }
+  .screen-poke {
+    max-width: 800px; 
+    margin-bottom: 0;
+  }
+
+  .letterEffect {
+    font-size: 3.7em;
+  }
+
+  h2 {
+    font-size: 2.3em;
+  }
+
+
+
+  h3 {
+    margin-block-end: 0.5em;
+  }
+
+  #text-banner {
+    left: calc(41%);
+    bottom: calc(28%);
+    font-size: 1.8em;
+  }
+
+  #text-banner>h2 {
+    margin-bottom: 0;
+  }
+
+}
+
