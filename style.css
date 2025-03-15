@@ -14,8 +14,34 @@ p {
   font-size: 1.6em;
 }
 
-li {
-   list-style: none;
+footer>ul {
+  list-style-type: none; 
+}
+
+footer ul li::before {
+  content: none; 
+}
+
+ul {
+  list-style-type: none; 
+  padding-left: 0; 
+}
+
+ul li {
+  position: relative; 
+  padding-left: 24px; 
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px; /* Desired width */
+  height: 16px; /* Desired height */
+  background-image: url('Resources/flying-saucer.svg');
+  background-size: contain; /* Scale the image to fit the container */
+  background-repeat: no-repeat; /* Prevent tile repetition */
 }
 
 a {
@@ -151,12 +177,17 @@ a {
     min-width: 163px;
     font-family: Ubuntu;
     position: absolute;
-    color: white;
+    color: rgb(255, 255, 255);
     text-shadow: 1px 1px 0 black;
     z-index: 99;
     left: calc(48%);
     bottom: calc(38%);
   }
+
+  #header {
+    display: flex;
+  }
+
 
 }
 
@@ -313,16 +344,16 @@ h2 {
  @keyframes pan-image2 {  
    0% {
      background-position: 42% 36%;
-     background-size: 150%;
+     background-size: 125%;
    }
    
    20% {
-     background-position: 30% 35%;
+     background-position: 30% 33%;
      background-size: 200%;
    }
    
    20.0001% { /* -- View 2 -- */
-     background-position: 80% 5%;
+     background-position: 80% 65%;
      background-size: 500%;
    }
    
@@ -337,7 +368,7 @@ h2 {
    }
    
    60% {
-     background-position: 84% 33%;
+     background-position: 84% 70%;
      background-size: 300%;
    }
    
@@ -357,7 +388,7 @@ h2 {
    }
    
    100% {
-     background-position: 72% 14%;
+     background-position: 50% 14%;
      background-size: 270%;
    }
  }
@@ -736,9 +767,44 @@ h2 {
 @media only screen and (min-width: 413px ) and (max-width: 600px){
   #text-banner {
     font-size: 1.2rem;
-    left: calc(48%);
-    bottom: calc(38%);
+    left: calc(45%);
+    bottom: calc(26%);
     width: calc(47%);
+  }
+
+  #header {
+    display: flex;
+    align-items: start;
+  }
+
+  .hamburger{
+    padding-left : 1em ;
+  }
+
+  p {
+    padding-left : 10px;
+    padding-right : 10px;
+  }
+
+  .sectionListing{
+    background-color: white;
+  }
+
+  body {
+    margin : 0;
+  }
+
+  article{
+    margin: 2em;
+  }
+
+  section{ 
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  section > p{
+    font-size: 1rem;
   }
 
 
@@ -823,7 +889,10 @@ h2 {
   transform: translateY(-23px) rotate(-45deg);
 }
 
-
+#header {
+  display: flex;
+  align-items: start;
+}
 
 
 }
