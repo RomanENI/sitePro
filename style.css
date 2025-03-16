@@ -22,6 +22,10 @@ footer ul li::before {
   content: none; 
 }
 
+.navbar ul li::before{
+  content: none;
+}
+
 ul {
   list-style-type: none; 
   padding-left: 0; 
@@ -171,25 +175,8 @@ a {
   bottom: calc(30%);
 }
 
-@media screen and (min-width: 375px) and (max-width: 412px){
-  
-  #text-banner {
-    min-width: 163px;
-    font-family: Ubuntu;
-    position: absolute;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 0 black;
-    z-index: 99;
-    left: calc(48%);
-    bottom: calc(38%);
-  }
-
-  #header {
-    display: flex;
-  }
 
 
-}
 
 
 
@@ -262,7 +249,7 @@ section > p {
   margin: 4%;
 }
 
-h2 {
+h2{
    align-self: center;
 }
 
@@ -763,6 +750,55 @@ h2 {
 } */
 
 /* End of carts */
+/* /////////////////////////SMOL////////////////////// */
+@media screen and (min-width: 375px) and (max-width: 412px){
+  
+  #text-banner {
+    min-width: 163px;
+    font-family: Ubuntu;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 0 black;
+    z-index: 99;
+    left: calc(48%);
+    bottom: calc(38%);
+  }
+
+  #header {
+    display: flex;
+    align-items: start;
+  }
+
+  .hamburger{
+    padding-left : 1em ;
+  }
+  body {
+    margin : 0;
+  }
+
+  article{
+    margin: 1em;
+  }
+
+  section{ 
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  section > p{
+    font-size: 1rem;
+  }
+
+  #projects{
+    align-self: flex-start;
+    margin-left : 2em;
+  }
+
+
+}
+
+
+
 
 @media only screen and (min-width: 413px ) and (max-width: 600px){
   #text-banner {
@@ -807,6 +843,10 @@ h2 {
     font-size: 1rem;
   }
 
+  #projects{
+    align-self: flex-start;
+    margin-left : 2em;
+  }
 
 }
 
@@ -879,21 +919,42 @@ h2 {
 
  .hamburger.active .bar:nth-child(2) {
   opacity: 0;
-}
+  }
 
-.hamburger.active .bar:nth-child(1) {
-  transform: translateY(23px) rotate(45deg);
-}
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(23px) rotate(45deg);
+  }
 
-.hamburger.active .bar:nth-child(3) {
-  transform: translateY(-23px) rotate(-45deg);
-}
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-23px) rotate(-45deg);
+  }
 
-#header {
-  display: flex;
-  align-items: start;
-}
+  #header {
+    display: flex;
+    align-items: start;
+  }
 
+  body {
+    margin : 0;
+  }
+
+  article{
+    margin: 2em;
+  }
+
+  section{ 
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  ul>li {
+    font-size: large;
+  }
+
+  #projects{
+    align-self: flex-start;
+    margin-left : 2em;
+  }
 
 }
 
