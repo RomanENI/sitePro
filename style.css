@@ -996,6 +996,31 @@ h2{
     margin-left: 0;
   }
 
+  li{
+    font-size: 1.6em;
+    margin-left : 4%;
+    margin-bottom : 0.6em;
+  }
+
+  ul li::before {
+    width: 0.9em; 
+    height: 0.9em; 
+    top : 4px;
+  }
+
+
+  #text-banner {
+    left: calc(41%);
+    bottom: calc(8%);
+    font-size: 1.8em;
+  }
+
+  section > p {
+    font-family: Ubuntu;
+    font-size: 2em;
+    margin: 4%;
+  }
+
    /* Burger management not mobile */
 
    #btn-and-banner {
@@ -1111,6 +1136,10 @@ h2{
       bottom: calc(24%);
       font-size: 1.4em;
   }
+
+
+
+  
 
 }
 
